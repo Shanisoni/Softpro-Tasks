@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=
+        "width=device-width, initial-scale=1.0">
+    <title>Periodic Table</title>
+    <style>
+        html {
+    background-color: whitesmoke;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 100;
+    padding: 0;
+}
+
+#page-title {
+    text-align: center;
+    color:black;
+    margin-top: 50px;
+    
+}
+
+.p-Table {
+    display: grid;
+    grid-template-columns: 
+        repeat(18, [group] minmax(7em, 10em));
+    grid-template-rows: repeat(7, 
+        [period] 1fr) [row6x] 1fr [row7x] 1fr;
+    counter-reset: atomic-number;
+    margin-top: 140px;
+    
+    
+    
+}
+
+.p-Table::before {
+    content: '';
+    grid-row: row6x / span 2;
+    grid-column: 1 / 3;
+}
+
+.ele {
+    border: thin solid whitesmoke;
+    text-align: center;
+    opacity: 0.85;
+}
+
+.ele:hover,
+.ele:focus {
+    opacity: 1;
+    font-weight: bold;
+}
+
+.ele-name {
+    border-bottom: none !important;
+    text-decoration: none !important;
+    word-break: break-all;
+    hyphens: auto;
+    font-size: 1.5em;
+    counter-increment: atomic-number;
+}
+
+.ele-name::before {
+    font-size: 0.8rem;
+    display: block;
+    content: counter(atomic-number);
+    color: black;
+}
+
+.ele-name::after {
+    font-size: 0.85rem;
+    display: block;
+    content: attr(title);
+}
+
+.ele-57,
+.ele-89 {
+    position: relative;
+}
+
+.ele-57::before,
+.ele-89::before,
+.ele-57::after,
+.ele-89::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    font-size: 1em;
+    top: 25%;
+    font-weight: normal !important;
+}
+
+.ele-57::before,
+.ele-89::before {
+    top: calc(-200% - 1rem);
+}
+
+.ele-57::before,
+.ele-57::after {
+    content: '*';
+}
+
+.ele-89::before,
+.ele-89::after {
+    content: '**';
+}
+
+.ele-57::after,
+.ele-89::after {
+    left: calc(-50% - 1rem);
+}
+
+.ele-5,
+.ele-13 {
+    grid-column: 13;
+}
+
+.ele-72,
+.ele-104 {
+    grid-column: 4;
+}
+
+.lan-group {
+    grid-row: row6x;
+    position: relative;
+    top: 1em;
+}
+
+.a-grp {
+    grid-row: row7x;
+    position: relative;
+    top: 1em;
+}
+
+.n-gas {
+    grid-column: 18;
+}
+
+.legend {
+    grid-row: 1 / 3;
+    grid-column: 5 / span 6;
+    border: medium ridge black;
+    padding: 0.5em;
+}
+
+.legend h2 {
+    margin: 0;
+}
+
+.legend ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.legend li {
+    display: inline-block;
+    padding: 0.25em;
+    margin-bottom: 0.5em;
+}
+
+.lan {
+    background-color: rgb(233, 147, 162);
+}
+
+.actinide {
+    background-color: rgb(235, 97, 166);
+}
+
+.al-metal {
+    background-color: rgb(243, 202, 90);
+}
+
+.alearth-metal {
+    background-color: #f1ce99;
+}
+
+.d-nonmetal {
+    background-color: #b237bd;
+}
+
+.patomic-nonmetal {
+    background-color: #84dfa6;
+}
+
+.pTransition-metal {
+    background-color:gold;
+}
+
+.metalloid {
+    background-color: rgb(84, 187, 93);
+}
+
+.n-gas {
+    background-color: #47d3d3;
+}
+
+.trans {
+    background-color: #e4f54e
+}
+.halogen{
+    background-color:rgb(235, 158, 170);
+}
+
+.liquid {
+    color: rgb(13, 104, 13);
+}
+
+.gas {
+    color:black;
+}
+    </style>
+</head>
+
+<body style="background-color: #189696; ">
+    <h1 id="page-title"  style="background-color: #c7d1d1; ">
+        <i>The Periodic Table of the Elements</i>
+    </h1>
+    
+    <div class='p-Table' aria-labelledby='page-title'>
+        <div tabindex='0' class='ele ele-1 d-nonmetal gas'>
+            <div class='ele-name' title='Hydrogen'>
+                H
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-2 n-gas gas'>
+            <div class='ele-name' title='Helium'>
+                He
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-3 al-metal'>
+            <div class='ele-name' title='Lithium'>
+                Li
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-4 alearth-metal'>
+            <div class='ele-name' title='Beryllium'>
+                Be
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-5 metalloid'>
+            <div class='ele-name' title='Boron'>
+                B
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-6 d-nonmetal gas'>
+            <div class='ele-name' title='Carbon'>
+                C
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-7 d-nonmetal gas'>
+            <div class='ele-name' title='Nitrogen'>
+                N
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-8 d-nonmetal gas'>
+            <div class='ele-name' title='Oxygen'>
+                O
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-9 halogen'>
+            <div class='ele-name' title='Fluorine'>
+                F
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-10 n-gas gas'>
+            <div class='ele-name' title='Neon'>
+                Ne
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-11 al-metal'>
+            <div class='ele-name' title='Sodium'>
+                Na
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-12 alearth-metal'>
+            <div class='ele-name' title='Magnesium'>
+                Mg
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-13 pTransition-metal'>
+            <div class='ele-name' title='Aluminium'>
+                Al
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-14 metalloid'>
+            <div class='ele-name' title='Silicon'>
+                Si
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-15 d-nonmetal gas'>
+            <div class='ele-name' title='Phosphorus'>
+                P
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-16 d-nonmetal gas'>
+            <div class='ele-name' title='Sulfur'>
+                S
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-17 halogen'>
+            <div class='ele-name' title='Chlorine'>
+                Cl
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-18 n-gas gas'>
+            <div class='ele-name' title='Argon'>
+                Ar
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-19 al-metal'>
+            <div class='ele-name' title='Potassium'>
+                K
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-20 alearth-metal'>
+            <div class='ele-name' title='Calcium'>
+                Ca
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-21 trans'>
+            <div class='ele-name' title='Scandium'>
+                Sc
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-22 trans'>
+            <div class='ele-name' title='Titanium'>
+                Ti
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-23 trans'>
+            <div class='ele-name' title='Vanadium'>
+                V
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-24 trans'>
+            <div class='ele-name' title='Chromium'>
+                Cr
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-25 trans'>
+            <div class='ele-name' title='Manganese'>
+                Mn
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-26 trans'>
+            <div class='ele-name' title='Iron'>
+                Fe
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-27 trans'>
+            <div class='ele-name' title='Cobalt'>
+                Co
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-28 trans'>
+            <div class='ele-name' title='Nickel'>
+                Ni
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-29 trans'>
+            <div class='ele-name' title='Copper'>
+                Cu
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-30 trans'>
+            <div class='ele-name' title='Zinc'>
+                Zn
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-31 pTransition-metal'>
+            <div class='ele-name' title='Gallium'>
+                Ga
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-32 metalloid'>
+            <div class='ele-name' title='Germanium'>
+                Ge
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-33 metalloid'>
+            <div class='ele-name' title='Arsenic'>
+                As
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-34 d-nonmetal gas'>
+            <div class='ele-name' title='Selenium'>
+                Se
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-35 halogen'>
+            <div class='ele-name' title='Bromine'>
+                Br
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-36 n-gas gas'>
+            <div class='ele-name' title='Krypton'>
+                Kr
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-37 al-metal'>
+            <div class='ele-name' title='Rubidium'>
+                Rb
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-38 alearth-metal'>
+            <div class='ele-name' title='Strontium'>
+                Sr
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-39 trans'>
+            <div class='ele-name' title='Yttrium'>
+                Y
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-40 trans'>
+            <div class='ele-name' title='Zirconium'>
+                Zr
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-41 trans'>
+            <div class='ele-name' title='Niobium'>
+                Nb
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-42 trans'>
+            <div class='ele-name' title='Molybdenum'>
+                Mo
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-43 trans'>
+            <div class='ele-name' title='Technetium'>
+                Tc
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-44 trans'>
+            <div class='ele-name' title='Ruthenium'>
+                Ru
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-45 trans'>
+            <div class='ele-name' title='Rhodium'>
+                Rh
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-46 trans'>
+            <div class='ele-name' title='Palladium'>
+                Pd
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-47 trans'>
+            <div class='ele-name' title='Silver'>
+                Ag
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-48 trans'>
+            <div class='ele-name' title='Cadmium'>
+                Cd
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-49 pTransition-metal'>
+            <div class='ele-name' title='Indium'>
+                In
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-50 pTransition-metal'>
+            <div class='ele-name' title='Tin'>
+                Sn
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-51 metalloid'>
+            <div class='ele-name' title='Antimony'>
+                Sb
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-52 metalloid'>
+            <div class='ele-name' title='Tellurium'>
+                Te
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-53 halogen'>
+            <div class='ele-name' title='Iodine'>
+                I
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-54 n-gas gas'>
+            <div class='ele-name' title='Xenon'>
+                Xe
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-55 al-metal'>
+            <div class='ele-name' title='Cesium'>
+                Cs
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-56 alearth-metal'>
+            <div class='ele-name' title='Barium'>
+                Ba
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-71 trans'>
+            <div class='ele-name' title='Luterium'>
+                Lu
+            </div>
+        </div>
+        
+        <div tabindex='0' class='ele ele-72 trans'>
+            <div class='ele-name' title='Hafnium'>
+                Hf
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-73 trans'>
+            <div class='ele-name' title='Tantalum'>
+                Ta
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-74 trans'>
+            <div class='ele-name' title='Tungsten'>
+                W
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-75 trans'>
+            <div class='ele-name' title='Rhenium'>
+                Re
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-76 trans'>
+            <div class='ele-name' title='Osmium'>
+                Os
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-77 trans'>
+            <div class='ele-name' title='Iridium'>
+                Ir
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-78 trans'>
+            <div class='ele-name' title='Platinum'>
+                Pt
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-79 trans'>
+            <div class='ele-name' title='Gold'>
+                Au
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-80 trans'>
+            <div class='ele-name' title='Mercury'>
+                Hg
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-81 pTransition-metal'>
+            <div class='ele-name' title='Thallium'>
+                Tl
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-82 pTransition-metal'>
+            <div class='ele-name' title='Lead'>
+                Pb
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-83 pTransition-metal'>
+            <div class='ele-name' title='Bismuth'>
+                Bi
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-84 metalloid'>
+            <div class='ele-name' title='Polonium'>
+                Po
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-85 halogen'>
+            <div class='ele-name' title='Astatine'>
+                At
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-86 n-gas gas'>
+            <div class='ele-name' title='Radon'>
+                Rn
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-87 al-metal'>
+            <div class='ele-name' title='Francium'>
+                Fr
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-88 alearth-metal'>
+            <div class='ele-name' title='Radium'>
+                Ra
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-103 trans'>
+            <div class='ele-name' title='Lawrencium'>
+                Lr
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-104 trans'>
+            <div class='ele-name' title='Rutherfordium'>
+                Rf
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-105 trans' >
+            <div class='ele-name' title='Dubnium' >
+                Db
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-106 trans'>
+            <div class='ele-name' title='Seaborgium'>
+                Sg
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-107 trans'>
+            <div class='ele-name' title='Bohrium'>
+                Bh
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-108 trans'>
+            <div class='ele-name' title='Hassium'>
+                Hs
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-109 trans'>
+            <div class='ele-name' title='Meitnerium'>
+                Mt
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-110 trans'>
+            <div class='ele-name' title='Darmstadtium'>
+                Ds
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-111 trans'>
+            <div class='ele-name' title='Roentgenium'>
+                Rg
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-112 trans'>
+            <div class='ele-name' title='Copernicium'>
+                Cn
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-113 trans'>
+            <div class='ele-name' title='Nihonium'>
+                Nh
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-114 trans'>
+            <div class='ele-name' title='Flerovium'>
+                Fl
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-115 trans'>
+            <div class='ele-name' title='Moscovium'>
+                Mc
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-116 trans'>
+            <div class='ele-name' title='Livermorium'>
+                Lv
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-117 trans'>
+            <div class='ele-name' title='Tennessine'>
+                Ts
+            </div>
+        </div>
+        <div tabindex='0' class='ele ele-118 n-gas gas'>
+            <div class='ele-name' title='Oganesson'>
+                Og
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
