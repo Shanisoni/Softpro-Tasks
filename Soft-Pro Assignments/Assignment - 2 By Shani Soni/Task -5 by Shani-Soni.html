@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>
+		HTML fieldset form Attribute
+	</title>
+	<style>
+        body{
+            background-color:whitesmoke;
+        }
+		h1,
+		h2,
+		.title {
+			text-align: center;
+		}
+		
+		fieldset {
+			width: 50%;
+			margin-left: 22%;
+		}
+		
+		h1 {
+			color: black;
+            text-decoration: underline;
+		}
+        .title{
+            color: blue;
+            font-size: 20px;
+        }
+	</style>
+</head>
+
+<body>
+	<h1>Fieldset Registration Form</h1>
+	
+	<form id="my">
+		<div class="title">
+			Information
+		</div>
+	</form>
+    <fieldset form="my">
+		<legend>Personal Information</legend>
+		Name:
+		<br> User ID:
+		<input type="text">
+	</fieldset>
+	<br>
+
+	<fieldset form="my">
+		<legend>Address</legend>
+		City:
+		<input type="text">
+		<br> State:
+		<input type="text">
+		<br> Country:
+		<input type="text">
+	</fieldset>
+	<br>
+	<fieldset form="my">
+		<legend>Marks:</legend>
+		HighSchool:
+		<input type="text">
+		<br> Intermediate:
+		<input type="text">
+		<br> Graduation/Diploma:
+		<input type="text">
+        <br> Other:
+		<input type="text">
+	</fieldset>
+
+</body>
+
+</html>

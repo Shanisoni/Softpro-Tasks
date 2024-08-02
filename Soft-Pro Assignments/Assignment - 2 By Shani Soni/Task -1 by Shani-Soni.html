@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: #bcbdd4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            padding: 80px;
+            background: #8a167a;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: white;
+        }
+
+        h2 {
+            text-align: center;
+            color: rgb(248, 248, 248);
+        }
+
+        h4 {
+            text-decoration: underline;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 15px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"],
+        .form-group input[type="date"],
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-group input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        .form-group button {
+            background-color: #e4e1eb;
+            color: rgb(180, 35, 66);
+            border: none;
+            padding: 8px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-top: 8px;
+            align-self: center;
+        }
+
+        .form-group button:hover {
+            background-color: #45a049;
+        }
+
+        hr {
+            border: 1px solid #fff;
+            margin: 20px 0;
+        }
+
+        .education-section,
+        .bank-details-section {
+            margin-bottom: 20px;
+        }
+
+        .education-section h5,
+        .bank-details-section h5 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Registration Form</h2>
+        <div>
+            <h4><i>Personal Information</i></h4>
+            <form action="#" method="post">
+                <div class="pi">
+                    <div class="form-group">
+                        <label for="firstName">First Name:</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fname">Father's Name:</label>
+                        <input type="text" id="fname" name="fname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mname">Mother's Name:</label>
+                        <input type="text" id="mname" name="mname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender:</label>
+                        <input type="radio" id="male" name="gender" value="male" required>
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female" required>
+                        <label for="female">Female</label>
+                        <input type="radio" id="other" name="gender" value="other" required>
+                        <label for="other">Other</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address:</label>
+                        <input type="text" id="address" name="address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City:</label>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="state">State:</label>
+                        <input type="text" id="state" name="state" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="zip">ZIP Code:</label>
+                        <input type="text" id="zip" name="zip" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country:</label>
+                        <select id="country" name="country" required>
+                            <option value="">Select Country</option>
+                            <option value="usa">USA</option>
+                            <option value="canada">Canada</option>
+                            <option value="uk">UK</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="maritalStatus">Marital Status:</label>
+                        <select id="maritalStatus" name="maritalStatus" required>
+                            <option value="">Select Status</option>
+                            <option value="single">Single</option>
+                            <option value="married">Married</option>
+                            <option value="divorced">Divorced</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="education">Education Level:</label>
+                        <select id="education" name="education" required>
+                            <option value="">Select Education</option>
+                            <option value="highschool">High School</option>
+                            <option value="bachelor">Bachelor's Degree</option>
+                            <option value="master">Master's Degree</option>
+                            <option value="doctorate">Doctorate</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="occupation">Occupation:</label>
+                        <input type="text" id="occupation" name="occupation" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hobbies">Hobbies:</label>
+                        <input type="text" id="hobbies" name="hobbies" required>
+                    </div>
+                </div>
+                <hr>
+                <div class="education-section">
+                    <h5>Education Details</h5>
+                    <div class="form-group">
+                        <label for="board1">High School Board:</label>
+                        <input type="text" id="board1" name="board1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="year1">Year of Completion:</label>
+                        <input type="text" id="year1" name="year1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="marks1">Marks (%):</label>
+                        <input type="text" id="marks1" name="marks1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="board2">Intermediate Board:</label>
+                        <input type="text" id="board2" name="board2" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="year2">Year of Completion:</label>
+                        <input type="text" id="year2" name="year2" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="marks2">Marks (%):</label>
+                        <input type="text" id="marks2" name="marks2" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="board3">Graduation Board:</label>
+                        <input type="text" id="board3" name="board3" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="year3">Year of Completion:</label>
+                        <input type="text" id="year3" name="year3" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="marks3">Marks (%):</label>
+                        <input type="text" id="marks3" name="marks3" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="board4">Other Qualification Board
