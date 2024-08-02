@@ -1,6 +1,4 @@
 
-
-
 <html>
 <head>
 <title>Student Registration Form</title>
@@ -9,17 +7,22 @@ h3{font-family: Calibri;
     font-size: 22pt;
     font-style: normal;
     font-weight: bold;
-    color:rgb(221, 33, 174);
+    color:rgb(0, 0, 0);
     text-align: center;
-    text-decoration: underline }
+    /* text-decoration: underline } */
+    border: 2px solid rgb(8, 136, 187);
+    background-color: rgb(95, 221, 21)
+
+}
 table{
     font-family: Calibri; 
     color:rgb(0, 0, 0); 
-    font-size: 11pt; 
+    font-size: 15pt; 
     font-style: normal;
     background-color: rgb(143, 46, 122); 
     border-collapse: collapse; 
-    border: 2px solid rgb(23, 221, 33)}
+    border: 2px solid rgb(8, 136, 187)}
+    
 
 table.inner{border: 0px}
   
@@ -28,30 +31,27 @@ table.inner{border: 0px}
  
 <body>
 <h3>STUDENT REGISTRATION FORM</h3>
-<table align="center" cellpadding = "10" style="border-radius: 4px;">
+<table align="center" cellpadding = "40" style="border-radius: 15px;">
 <tr>
 <td>FIRST NAME</td>
-<td><input type="text" name="First_Name" maxlength="30"/>
+<td><input type="text" name="First_Name" maxlength="150"/>
 </td>
 </tr>
 
 <tr>
 <td>LAST NAME</td>
-<td><input type="text" name="Last_Name" maxlength="30"/>
-
+<td><input type="text" name="Last_Name" maxlength="150"/>
 </td>
 </tr>
  
 <tr>
 <td>DATE OF BIRTH</td>
- 
 <td>
 <select name="Birthday_day" id="Birthday_Day" style="border-radius: 4px;">
 <option value="-1">Day:</option>
 <option value="1">1</option>
 <option value="2">2</option>
 <option value="3">3</option>
- 
 <option value="4">4</option>
 <option value="5">5</option>
 <option value="6">6</option>
@@ -61,7 +61,6 @@ table.inner{border: 0px}
 <option value="10">10</option>
 <option value="11">11</option>
 <option value="12">12</option>
- 
 <option value="13">13</option>
 <option value="14">14</option>
 <option value="15">15</option>
@@ -71,7 +70,6 @@ table.inner{border: 0px}
 <option value="19">19</option>
 <option value="20">20</option>
 <option value="21">21</option>
- 
 <option value="22">22</option>
 <option value="23">23</option>
 <option value="24">24</option>
@@ -81,7 +79,6 @@ table.inner{border: 0px}
 <option value="28">28</option>
 <option value="29">29</option>
 <option value="30">30</option>
- 
 <option value="31">31</option>
 </select>
  
@@ -102,7 +99,6 @@ table.inner{border: 0px}
 </select>
  
 <select name="Birthday_Year" id="Birthday_Year" style="border-radius: 4px;">
- 
 <option value="-1">Year:</option>
 <option value="2012">2012</option>
 <option value="2011">2011</option>
@@ -117,7 +113,6 @@ table.inner{border: 0px}
 <option value="2002">2002</option>
 <option value="2001">2001</option>
 <option value="2000">2000</option>
- 
 <option value="1999">1999</option>
 <option value="1998">1998</option>
 <option value="1997">1997</option>
@@ -128,7 +123,6 @@ table.inner{border: 0px}
 <option value="1992">1992</option>
 <option value="1991">1991</option>
 <option value="1990">1990</option>
- 
 <option value="1989">1989</option>
 <option value="1988">1988</option>
 <option value="1987">1987</option>
@@ -168,10 +162,7 @@ Female <input type="radio" name="Gender" value="Female" />
  
 <!----- Address ---------------------------------------------------------->
 <tr>
-<td>ADDRESS 
- 
- 
-</td>
+<td>ADDRESS</td>
 <td><textarea name="Address" rows="4" cols="30"></textarea></td>
 </tr>
  
@@ -203,44 +194,34 @@ Female <input type="radio" name="Gender" value="Female" />
 </tr>
  
 <!----- Hobbies ---------------------------------------------------------->
- 
 <tr>
-<td>HOBBIES 
- 
- 
-</td>
- 
+<td>HOBBIES</td>
 <td>
-Drawing
-<input type="checkbox" name="Hobby_Drawing" value="Drawing" />
-Singing
-<input type="checkbox" name="Hobby_Singing" value="Singing" />
-Dancing
-<input type="checkbox" name="Hobby_Dancing" value="Dancing" />
-Sketching
-<input type="checkbox" name="Hobby_Cooking" value="Cooking" />
- 
- 
-Others
-<input type="checkbox" name="Hobby_Other" value="Other">
+Drawing <input type="checkbox" name="Hobby_Drawing" value="Drawing" />
+Singing <input type="checkbox" name="Hobby_Singing" value="Singing" />
+Dancing <input type="checkbox" name="Hobby_Dancing" value="Dancing" />
+Sketching <input type="checkbox" name="Hobby_Cooking" value="Cooking" />
+Others <input type="checkbox" name="Hobby_Other" value="Other">
 <input type="text" name="Other_Hobby" maxlength="30" />
+</td>
+</tr>
+ 
+<!----- Course ---------------------------------------------------------->
+<tr>
+<td>COURSES APPLIED FOR</td>
+<td>
+BTech <input type="radio" name="Course_BTech" value="BTech">
+B.Com <input type="radio" name="Course_BCom" value="B.Com">
+B.Sc <input type="radio" name="Course_BSc" value="B.Sc">
+B.A <input type="radio" name="Course_BA" value="B.A">
 </td>
 </tr>
  
 <!----- Qualification---------------------------------------------------------->
 <tr>
-<td>QUALIFICATION 
- 
- 
- 
- 
- 
- 
-</td>
- 
+<td>QUALIFICATION</td>
 <td>
 <table>
- 
 <tr>
 <td align="center"><b>Sl.No.</b></td>
 <td align="center"><b>Examination</b></td>
@@ -248,7 +229,6 @@ Others
 <td align="center"><b>Percentage</b></td>
 <td align="center"><b>Year of Passing</b></td>
 </tr>
- 
 <tr>
 <td>1</td>
 <td>Class X</td>
@@ -256,7 +236,6 @@ Others
 <td><input type="text" name="ClassX_Percentage" maxlength="30" /></td>
 <td><input type="text" name="ClassX_YrOfPassing" maxlength="30" /></td>
 </tr>
- 
 <tr>
 <td>2</td>
 <td>Class XII</td>
@@ -264,15 +243,15 @@ Others
 <td><input type="text" name="ClassXII_Percentage" maxlength="30" /></td>
 <td><input type="text" name="ClassXII_YrOfPassing" maxlength="30" /></td>
 </tr>
- 
 <tr>
 <td>3</td>
 <td>Graduation</td>
 <td><input type="text" name="Graduation_Board" maxlength="30" /></td>
 <td><input type="text" name="Graduation_Percentage" maxlength="30" /></td>
-<td><input type="text" name="Graduation_YrOfPassing" maxlength="30" /></td>
+<td><input
+
+ type="text" name="Graduation_YrOfPassing" maxlength="30" /></td>
 </tr>
- 
 <tr>
 <td>4</td>
 <td>Masters</td>
@@ -280,7 +259,6 @@ Others
 <td><input type="text" name="Masters_Percentage" maxlength="30" /></td>
 <td><input type="text" name="Masters_YrOfPassing" maxlength="30" /></td>
 </tr>
- 
 <tr>
 <td></td>
 <td></td>
@@ -288,36 +266,21 @@ Others
 <td align="center">(upto 2 decimal)</td>
 </tr>
 </table>
- 
-</td>
-</tr>
- 
-<!----- Course ---------------------------------------------------------->
-<tr>
-<td>COURSES
-APPLIED FOR</td>
-<td>
-BTech
-<input type="radio" name="Course_BTech" value="BTech">
-B.Com
-<input type="radio" name="Course_BCom" value="B.Com">
-B.Sc
-<input type="radio" name="Course_BSc" value="B.Sc">
-B.A
-<input type="radio" name="Course_BA" value="B.A">
 </td>
 </tr>
  
 <!----- Submit and Reset ------------------------------------------------->
 <tr>
     <td colspan="2" align="center">
-    <input type="submit" value="Submit" style="padding: 13px 23px; font-size: 18px; background-color: rgb(214, 238, 238);color: crimson; border: none; cursor: pointer;border-radius: 4px; ">
-    <input type="reset" value="Reset"style="padding: 13px 23px; font-size: 18px; background-color: rgb(214, 238, 238);color: crimson; border: none; cursor: pointer;border-radius: 4px;">
+    <input type="submit" value="Submit" style="padding: 13px 23px; font-size: 18px; background-color: rgb(214, 238, 238);color: crimson; border: none; cursor: pointer;border-radius: 4px;">
+    <input type="reset" value="Reset" style="padding: 13px 23px; font-size: 18px; background-color: rgb(214, 238, 238);color: crimson; border: none; cursor: pointer;border-radius: 4px;">
     </td>
 </tr>
 </table>
  
 </form>
- 
 </body>
 </html>
+
+
+

@@ -6,125 +6,127 @@
     <title>Patient Registration Form</title>
 
     <style>
-        
-     body {
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    background-color: #bcbdd4;
-    margin: 0;
-    padding: 0;
-    }
-    
-    .form-group button {
-    background-color:rgb(27, 12, 15);
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin-top: 2px;
-    cursor: pointer;
-    border-radius: 4px;
-    margin-top: 8px;
-    margin-left: 44%;
-}
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: #bcbdd4;
+            margin: 0;
+            padding: 0;
+        }
 
-.form-group button:hover {
-    background-color: #45a049;
-    
-}
-h2 {
-    text-align: center;
-    color:white;
-    
-}
-h4{
-    text-decoration: underline;
-}
-h5{
-    word-spacing: 170px;
-}
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            background: darkcyan;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: black;
+        }
 
-.container {
-    width: 60%;
-    margin: 0 auto;
-    padding: 20px;
-    background:darkcyan;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: black;
-}
-form {
-    display:block;
-    flex-wrap:wrap;
-}
-.form-group {
-    width: 1000;
-    margin-bottom: 3px;
+        h2 {
+            text-align: center;
+            color: white;
+            margin-bottom: 20px; /* Space between title and form */
+            background-color: #2e7e32;
+            margin: 2rem;
+            padding: 2rem;
+        }
 
-}
+        h4 {
+            text-align: center;
+            text-decoration: underline;
+            color: white;
+            margin-bottom: 20px; /* Space between section heading and form fields */
+        }
 
-.form-group label {
-    display: block;
-    margin-bottom: 4px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group input[type="tel"],
-.form-group input[type="date"],
-.form-group input[type="number"],
-.form-group input[type="url"],
-.form-group select,
-.form-group textarea {
-    width: 40;
-    padding: 2px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing:border-box;
-    margin-right: 60px;
-    margin-left: 5px;
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px; /* Reduced space between form fields */
+        }
 
-}
-.form-group input[type="radio"],
-.form-group input[type="checkbox"] {
-    margin-right: 5px;
-}
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
 
+        .form-group label {
+            margin-bottom: 5px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"],
+        .form-group input[type="date"],
+        .form-group input[type="number"],
+        .form-group input[type="url"],
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            max-width: 300px; /* Added max-width to limit the size */
+            padding: 4px; /* Reduced padding */
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-group input[type="radio"],
+        .form-group input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .form-group button {
+            background-color: rgb(27, 12, 15);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-top: 20px;
+            align-self: center;
+        }
+
+        .form-group button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2> Patient Registration Form</h2>
-        <div>
-        <h4><i>Personal Information</i></h4>
+
+        <h2>Patient Registration Form</h2>
+
         <form action="#" method="post">
-        <div class="pi">
+
+            <h4><i>Personal Information</i></h4>
             <div class="form-group">
-                <label>First Name:</label>
-                <input type="text" id="firstName" name="firstName" style="margin-left: 80px;">
-                
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
             </div>
             <div class="form-group">
                 <label for="lastName">Last Name:</label>
-                <input type="text" id="lastName" name="lastName" style="margin-left: 80px;"required>
+                <input type="text" id="lastName" name="lastName" required>
             </div>
             <div class="form-group">
                 <label for="fname">Father's Name:</label>
-                <input type="text" id="fname" name="fname" style="margin-left: 58px;"required>
+                <input type="text" id="fname" name="fname" required>
             </div>
             <div class="form-group">
                 <label for="mname">Mother's Name:</label>
-                <input type="text" id="mname" name="mname" style="margin-left: 50px;"required>
+                <input type="text" id="mname" name="mname" required>
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email"style="margin-left: 116px;"required>
+                <input type="email" id="email" name="email" required>
             </div>
             <div class="form-group">
                 <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" style="margin-left: 50px;"required>
+                <input type="tel" id="phone" name="phone" required>
             </div>
             <div class="form-group">
                 <label for="gender">Gender:</label>
@@ -135,29 +137,29 @@ form {
                 <input type="radio" id="other" name="gender" value="other" required>
                 <label for="other">Other</label>
             </div>
-            <div class="form-group" >
+            <div class="form-group">
                 <label for="dob">Date of Birth:</label>
-                <input type="date" id="dob" name="dob"style="margin-left: 69px;" required>
+                <input type="date" id="dob" name="dob" required>
             </div>
             <div class="form-group">
                 <label for="address">Address:</label>
-                <input type="text" id="address" name="address"style="margin-left: 94px;" required>
+                <input type="text" id="address" name="address" required>
             </div>
             <div class="form-group">
                 <label for="city">City:</label>
-                <input type="text" id="city" name="city" style="margin-left: 120px;"required>
+                <input type="text" id="city" name="city" required>
             </div>
             <div class="form-group">
                 <label for="state">State:</label>
-                <input type="text" id="state" name="state"style="margin-left: 115px;"required>
+                <input type="text" id="state" name="state" required>
             </div>
             <div class="form-group">
                 <label for="zip">ZIP Code:</label>
-                <input type="text" id="zip" name="zip"style="margin-left: 83px;" required>
+                <input type="text" id="zip" name="zip" required>
             </div>
             <div class="form-group">
                 <label for="country">Country:</label>
-                <select id="country" name="country"style="margin-left:90px" required>
+                <select id="country" name="country" required>
                     <option value="">Select Country</option>
                     <option value="usa">USA</option>
                     <option value="canada">Canada</option>
@@ -167,21 +169,19 @@ form {
             </div>
             <div class="form-group">
                 <label for="ip">Insurance Provider:</label>
-                <input type="text" id="ip" name="zip"style="margin-left: 24px;" required>
-                    <!-- Add more options as needed -->
-                </select>
+                <input type="text" id="ip" name="ip" required>
             </div>
             <div class="form-group">
-                <label for="in">Insurance No,</label>
-                <input type="text" id="in" name="in"style="margin-left: 58px;" required>
+                <label for="in">Insurance No:</label>
+                <input type="text" id="in" name="in" required>
             </div>
             <div class="form-group">
                 <label for="emergencyContactName">Emergency Contact Name:</label>
-                <input type="text" id="emergencyContactName" name="emergencyContactName" style="margin-left: 63px;" required>
+                <input type="text" id="emergencyContactName" name="emergencyContactName" required>
             </div>
             <div class="form-group">
                 <label for="emergencyContactNumber">Emergency Contact Number:</label>
-                <input type="tel" id="emergencyContactNumber" name="emergencyContactNumber" style="margin-left: 47px;" required>
+                <input type="tel" id="emergencyContactNumber" name="emergencyContactNumber" required>
             </div>
             <div class="form-group">
                 <label for="relationshipToContact">Relationship to Emergency Contact:</label>
@@ -190,16 +190,7 @@ form {
             <div class="form-group">
                 <label for="consent">Consent to Medical Treatment:</label>
                 <input type="checkbox" id="consent" name="consent" required>
-            
             </div>
-            </div>
-        </div>
-    
-
-            <div>
-            
-           
-            
             <div class="form-group">
                 <button type="submit">Submit</button>
             </div>
@@ -207,3 +198,4 @@ form {
     </div>
 </body>
 </html>
+

@@ -4,86 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Card</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
         body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
+            font-family: Arial, sans-serif;
+            background-color: #801f1f;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
-.menu-card {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 100%;
-    max-width: 600px;
-    box-sizing: border-box;
-}
+        .menu-card {
+            background-color: #d9dee0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 100%;
+            max-width: 600px;
+            box-sizing: border-box;
+        }
 
-.menu-header {
-    text-align: center;
-    margin-bottom: 20px;
-}
+        .menu-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-.menu-header h1 {
-    margin: 0;
-    font-size: 2em;
-    color: #131111;
-}
+        .menu-header h1 {
+            margin: 0;
+            font-size: 2em;
+            color: #131111;
+        }
 
-.menu-header p {
-    margin: 5px 0 0;
-    color: #666;
-}
+        .menu-header p {
+            margin: 5px 0 0;
+            color: #666;
+        }
 
-.menu-category {
-    margin-bottom: 20px;
-    
-}
+        .menu-category {
+            margin-bottom: 20px;
+        }
 
-.category-header {
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
-}
+        .category-header {
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
 
-h2 {
-    margin: 0;
-    font-size: 20px;
-    color: #0558b1;
-    line-height: 60px;
-    text-decoration: underline;
-}
+        h2 {
+            margin: 0;
+            font-size: 20px;
+            color: #0558b1;
+            line-height: 1.5;
+            text-decoration: underline;
+        }
 
-.menu-item {
-    margin-bottom: 15px;
-}
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
 
-.menu-item h3 {
-    margin: 0 0 5px;
-    line-height: 8px;
-    font-size: 15px;
-    color: #333;
-}
+        .menu-item h3 {
+            margin: 0;
+            font-size: 15px;
+            color: #333;
+        }
 
-.menu-item .description {
-    margin: 0 0 5px;
-    color: #555;
-}
+        .menu-item .price {
+            font-weight: bold;
+            color: #007bff;
+        }
 
-.menu-item .price {
-    margin: 0;
-    font-weight: bold;
-    color: #007bff;
-}
-
+        hr {
+            border: 0;
+            height: 1px;
+            background: #ddd;
+            margin: 20px 0;
+        }
     </style>
 </head>
 <body>
@@ -92,67 +91,104 @@ h2 {
             <h1>Restaurant Menu</h1>
             <p><i>Welcome to our restaurant!</i></p>
         </div>
-        <div class="menu-category">
-            
-                <h2>Snacks</h2>
-            
-            <div class="menu-item">
-                <h3>Paneer Tikka --------------------------------------129 Rs</h3>
-            </div>
-            <div class="menu-item">
-                <h3>Stuffed Mushrooms --------------------------------------129 Rs</h3>
-            </div>
-            <div class="menu-item">
-                <h3>french fries --------------------------------------119 Rs</h3>
-            </div>
-            <div class="menu-item">
-                <h3>Paneer Makhni Roll --------------------------------------119 Rs</h3>
-            </div>
-            <div class="menu-item">
-                <h3>wraps --------------------------------------129 Rs</h3>
-            </div>
-        </div><hr>
 
-      <div class="menu-category">
-            
-                <h2>Main Course</h2>
-            
+        <div class="menu-category">
+            <h2>Snacks</h2>
             <div class="menu-item">
-                <h3>Butter Paneer --------------------------------------250 Rs</h3>
+                <h3>Paneer Tikka</h3>
+                <span class="price">129 Rs</span>
             </div>
             <div class="menu-item">
-                <h3>Dal Makhni --------------------------------------230 Rs</h3>
+                <h3>Stuffed Mushrooms</h3>
+                <span class="price">129 Rs</span>
             </div>
             <div class="menu-item">
-                <h3>Dal Fry --------------------------------------180 Rs</h3>
+                <h3>French Fries</h3>
+                <span class="price">119 Rs</span>
             </div>
             <div class="menu-item">
-                <h3>Mushroom Gravy --------------------------------------210 Rs</h3>
+                <h3>Paneer Makhni Roll</h3>
+                <span class="price">119 Rs</span>
             </div>
             <div class="menu-item">
-                <h3>Handi Paneer --------------------------------------250 Rs</h3>
-            </div>
-        </div><hr>
-       <div class="menu-category">
-            
-                <h2>Dessert</h2>
-            
-            <div class="menu-item">
-                <h3>Chocolate Cake --------------------------------------350 Rs</h3>
+                <h3>Wraps</h3>
+                <span class="price">129 Rs</span>
             </div>
             <div class="menu-item">
-                <h3>Vanilla Cake --------------------------------------300 Rs</h3>
+                <h3>Spring Rolls</h3>
+                <span class="price">139 Rs</span>
             </div>
             <div class="menu-item">
-                <h3>Chocolate IceCream --------------------------------------290 Rs</h3>
+                <h3>Chilli Paneer</h3>
+                <span class="price">149 Rs</span>
+            </div>
+        </div>
+        <hr>
+
+        <div class="menu-category">
+            <h2>Main Course</h2>
+            <div class="menu-item">
+                <h3>Butter Paneer</h3>
+                <span class="price">250 Rs</span>
             </div>
             <div class="menu-item">
-                <h3>Rasmalai --------------------------------------210 Rs</h3>
+                <h3>Dal Makhni</h3>
+                <span class="price">230 Rs</span>
             </div>
             <div class="menu-item">
-                <h3>Chocolate Brownie --------------------------------------180 Rs</h3>
+                <h3>Dal Fry</h3>
+                <span class="price">180 Rs</span>
             </div>
-        </div><hr>
+            <div class="menu-item">
+                <h3>Mushroom Gravy</h3>
+                <span class="price">210 Rs</span>
+            </div>
+            <div class="menu-item">
+                <h3>Handi Paneer</h3>
+                <span class="price">250 Rs</span>
+            </div>
+            <div class="menu-item">
+                <h3>Vegetable Biryani</h3>
+                <span class="price">200 Rs</span>
+            </div>
+            <div class="menu-item">
+                <h3>Chicken Curry</h3>
+                <span class="price">270 Rs</span>
+            </div>
+        </div>
+        <hr>
+
+        <div class="menu-category">
+            <h2>Dessert</h2>
+            <div class="menu-item">
+                <h3>Chocolate Cake</h3>
+                <span class="price">350 Rs</span>
+            </div>
+            <div class="menu-item">
+                <h3>Vanilla Cake</h3>
+                <span class="price">300 Rs</span>
+            </div>
+            <div class="menu-item">
+                <h3>Chocolate Ice Cream</h3>
+                <span class="price">290 Rs</span>
+            </div>
+            <div class="menu-item">
+                <h3>Rasmalai</h3>
+                <span class="price">210 Rs</span>
+            </div>
+            <div class="menu-item">
+                <h3>Chocolate Brownie</h3>
+                <span class="price">180 Rs</span>
+            </div>
+            <div class="menu-item">
+                <h3>Gulab Jamun</h3>
+                <span class="price">150 Rs</span>
+            </div>
+            <div class="menu-item">
+                <h3>Kesar Pista Kulfi</h3>
+                <span class="price">200 Rs</span>
+            </div>
+        </div>
     </div>
 </body>
 </html>
